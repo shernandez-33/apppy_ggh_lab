@@ -109,6 +109,6 @@ Ahora realizaremos cambios incrementales para simular el ciclo de vida del softw
 *   **`git diff`**: Compara los cambios realizados en tu código antes de prepararlos.
 *   **`git pull`**: Si trabajas con otros, usa esto para traer y combinar los cambios del servidor a tu equipo local.
 
-*   **git log --oneline --decorate --graph`**: Visualiza de forma técnica y gráfica el historial de confirmaciones y dónde se encuentran los punteros 
+*   **`git log --oneline --decorate --graph`**: Visualiza de forma técnica y gráfica el historial de confirmaciones y dónde se encuentran los punteros 
      de las ramas y etiquetas
-*   **git remote -v`**: Muestra las URLs asociadas a tus remotos para verificar la conexión con GitHub
+*   **`git remote -v`**: Muestra las URLs asociadas a tus remotos para verificar la conexión con GitHub
