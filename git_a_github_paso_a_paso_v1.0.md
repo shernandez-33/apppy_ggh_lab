@@ -1,3 +1,5 @@
+### DE GIT A GITHUB: COMANDOS BASICOS
+
 Esta guía práctica te llevará desde la configuración inicial de Git en tu computadora hasta la gestión de versiones de un proyecto de **Python** en **GitHub**. Git funciona capturando **instantáneas** (snapshots) de tu proyecto en momentos específicos, permitiéndote volver a ellas o colaborar con otros de forma eficiente.
 
 ### Fase 1: Configuración e Inicialización Local
@@ -51,9 +53,11 @@ Para compartir tu trabajo, necesitas un repositorio remoto.
     ```bash
     git remote add origin https://github.com/tu-usuario/mi-proyecto-python.git
     ó
-    git remote add origin git@github.com:tu-usuario/mi-proyecto-python.git   (Recomendación de github)
+    git remote add origin git@github.com:tu-usuario/mi-proyecto-python.git  (Recomendación de github)
     ```
 3.  **Sube el código:** Envía tu rama principal (usualmente `master` o `main`) al servidor.
+    El parámetro -u (o --set-upstream) establece una relación de seguimiento entre tu rama local y la remota, facilitando futuros comandos de envío y 
+    recepción. Este parametro solo se utiliza cuando se sube el código por primera vez.
     ```bash
     git push -u origin main
     ```
@@ -75,7 +79,7 @@ Ahora realizaremos cambios incrementales para simular el ciclo de vida del softw
     git add app.py
     git commit -m "v1.1: Se añade función de saludo"
     git tag -a v1.1 -m "Funcion de saludo agg"
-    git push origin main
+    git push origin main (o simplemente git push)
     ```
 
 #### Versión 1.2: Mejora de la lógica
@@ -100,7 +104,11 @@ Ahora realizaremos cambios incrementales para simular el ciclo de vida del softw
     git push origin --tags
     ```
 
-### Resumen de Comandos Útiles
+### Resumen de Comandos Útiles y de inspección técnica
 *   **`git log --oneline`**: Visualiza tu historial de versiones de forma compacta.
 *   **`git diff`**: Compara los cambios realizados en tu código antes de prepararlos.
 *   **`git pull`**: Si trabajas con otros, usa esto para traer y combinar los cambios del servidor a tu equipo local.
+
+*   **git log --oneline --decorate --graph`**: Visualiza de forma técnica y gráfica el historial de confirmaciones y dónde se encuentran los punteros 
+     de las ramas y etiquetas
+*   **git remote -v`**: Muestra las URLs asociadas a tus remotos para verificar la conexión con GitHub
